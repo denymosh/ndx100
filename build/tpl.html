@@ -85,7 +85,7 @@ const c=document.getElementById('c');
 c.style.setProperty('--lab','135px');
 const K=innerWidth<=760?62:76; // 手机上给截断柱右侧的数值和 logo 多留些空间
 const x=v=>Math.min(v,CAP)/CAP*K; // 右侧留 24% 给截断柱的数值与 logo
-let h=`<div class="head"><span style="left:calc(${x(D.idx_fpe)}% - 4px);transform:translateX(-100%)">纳指100前瞻：<b>${D.idx_fpe}</b></span><span style="left:calc(${x(D.idx_pe)}% + 4px)">纳指100滚动：<b>${D.idx_pe}</b></span></div>`;
+let h=`<div class="head"><span style="left:calc(${x(D.idx_fpe)}% - 4px);transform:translateX(-100%)">纳指100前瞻：<b>${D.idx_fpe.toFixed(1)}</b></span><span style="left:calc(${x(D.idx_pe)}% + 4px)">纳指100滚动：<b>${D.idx_pe.toFixed(1)}</b></span></div>`;
 let body='';
 D.rows.forEach((r,i)=>{
   const pe=r.pe,f=r.fpe;let p='';
